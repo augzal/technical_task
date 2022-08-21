@@ -70,7 +70,7 @@ def convert_to_iso(data, col_name):
     new_values = []
     for row in data[1:]:
         try:
-            new_values.append(datetime.strptime(row[col_id], '%m/%d/%Y'))
+            new_values.append(datetime.strptime(row[col_id], '%m/%d/%Y').date())
         except Exception as e:
             new_values.append(None)
     return new_values
