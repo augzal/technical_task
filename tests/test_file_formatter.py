@@ -55,7 +55,7 @@ class TestDocumnetFormatter(unittest.TestCase):
 
     def test_convert_to_iso(self):
         date_values = convert_to_iso(self.data, 'col3')
-        self.assertEqual(date_values, [None, datetime.datetime(2001, 6, 25), None])
+        self.assertEqual(date_values, [None, datetime.datetime(2001, 6, 25).date(), None])
 
     def test_select_cols(self):
         new_data = select_cols(self.data, ['col1', 'col2'])
